@@ -66,7 +66,7 @@ def psrCopy(fileName):
 
     stpPath = None
     for f in dirs:
-        if (f.find(tireSize_ATC) != -1) and (f.endswith(r'.stp')):
+        if (f.find(tireSize_ATC) != -1)  and (f.endswith(r'.stp')):
             print('stp file found in ', f)
             stpPath = f
         else:
