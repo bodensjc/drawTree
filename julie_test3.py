@@ -140,6 +140,6 @@ def drawTree(currentRound, originLst):
         drawTree(currentRound-1, tmp)
 
 
-
-drawTree(rounds, [[0,0]])
-#blank
+if __name__ == "__main__":
+    drawTree(rounds, [[0,0]])
+    #blank
