@@ -1,2 +1,0 @@
-# testRepo
-private test repository
