@@ -11,19 +11,17 @@ delta = 0.1
 
 pairlst=[]#empty list to store endpoints of all branches
 
-
-#greate graph environment
-circGraph= graph(width=1000, height=1000,
-    xmin=-1.1, xmax=1.1, ymin=-1.1, ymax=1.1,
-    title="Tree Program", xtitle=f"split = {split}\t maxradius = {maxradius}\t length = {radius}\t rounds = {rounds}")
-
-
-#circle/origin setup
-f1 = gcurve(color=color.cyan)
-for theta in arange(0, 2*pi, 0.01):
-    f1.plot(maxradius*cos(theta),maxradius*sin(theta))
-finit = gdots(color=color.red)
-finit.plot([0,0])
+def setupEnvironment():
+    #greate graph environment
+    circGraph= graph(width=1000, height=1000,
+        xmin=-1.1, xmax=1.1, ymin=-1.1, ymax=1.1,
+        title="Tree Program", xtitle=f"split = {split}\t maxradius = {maxradius}\t length = {radius}\t rounds = {rounds}")
+    #circle/origin setup
+    f1 = gcurve(color=color.cyan)
+    for theta in arange(0, 2*pi, 0.01):
+        f1.plot(maxradius*cos(theta),maxradius*sin(theta))
+    finit = gdots(color=color.red)
+    finit.plot([0,0])
 
 #variable for randomized angle
 def randomAng_func():
@@ -141,5 +139,6 @@ def drawTree(currentRound, originLst):
 
 
 if __name__ == "__main__":
+    setupEnvironment()
     drawTree(rounds, [[0,0]])
     #blank
