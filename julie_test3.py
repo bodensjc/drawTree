@@ -108,7 +108,7 @@ def branch(origin):
             else:
                 theta += delta #move slightly
         else: #if it doesn't work for all angles
-            #print(int_segs)
+            #JULIE KEEP WORKING HERE
             L1 = line(origin, target) #new branch
             print(int_seg)
             L2 = line(int_seg[0],int_seg[1])
